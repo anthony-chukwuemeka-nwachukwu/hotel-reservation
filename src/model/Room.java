@@ -1,15 +1,17 @@
 package model;
 
 public class Room implements IRoom{
-    private String roomNumber;
-    private Double price;
-    private RoomType enumeration;
+    private final String roomNumber;
+    private final Double price;
+    private final RoomType enumeration;
+    private boolean free;
 
     public Room (String roomNumber, Double price, RoomType enumeration){
         super();
         this.roomNumber = roomNumber;
         this.price = price;
         this.enumeration = enumeration;
+        this.free = true;
     }
 
     @Override
@@ -29,7 +31,11 @@ public class Room implements IRoom{
 
     @Override
     public boolean isFree() {
-        return true;
+        return free;
+    }
+
+    public void setFree(){
+        free = !isFree();
     }
 
     @Override

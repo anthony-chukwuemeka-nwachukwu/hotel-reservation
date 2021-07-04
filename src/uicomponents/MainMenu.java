@@ -48,6 +48,7 @@ public class MainMenu {
                 case 2 -> seeMyReservations();
                 case 3 -> createAccount();
                 case 5 -> mainScanner.close();
+                default -> throw new IllegalArgumentException("For input: "+ mainMenuChoice);
             }
         } catch (IllegalArgumentException ex) {
             System.out.println(ex.getLocalizedMessage()+", Entry must be a number between 1 and 5");

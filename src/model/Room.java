@@ -4,14 +4,15 @@ public class Room implements IRoom{
     private final String roomNumber;
     private final Double price;
     private final RoomType enumeration;
-    private boolean free;
 
     public Room (String roomNumber, Double price, RoomType enumeration){
         super();
+        if (roomNumber == null || price == null || enumeration == null) {
+            throw new IllegalArgumentException("All fields are required");
+        }
         this.roomNumber = roomNumber;
         this.price = price;
         this.enumeration = enumeration;
-        this.free = true;
     }
 
     @Override
@@ -29,13 +30,15 @@ public class Room implements IRoom{
         return enumeration;
     }
 
+    public void setRoomNumber(){}
+
+    public void setPrice(){}
+
+    public void setEnumeration(){}
+
     @Override
     public boolean isFree() {
-        return free;
-    }
-
-    public void setFree(){
-        free = !isFree();
+        return price==0.0;
     }
 
     @Override

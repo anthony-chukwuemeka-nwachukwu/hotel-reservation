@@ -9,10 +9,16 @@ public class Reservation {
     private final Date checkOutDate;
 
     public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate){
-        this.customer = customer;
-        this.room = room;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
+        if (customer == null || room == null || checkInDate == null || checkOutDate == null) {
+            throw new IllegalArgumentException("All fields are required");
+        }else if (checkInDate.after(checkOutDate) || checkInDate.equals(checkOutDate)){
+            throw new IllegalArgumentException("Checkout date must be after checkin date");
+        }else{
+            this.customer = customer;
+            this.room = room;
+            this.checkInDate = checkInDate;
+            this.checkOutDate = checkOutDate;
+        }
     }
 
     public Date getCheckInDate(){

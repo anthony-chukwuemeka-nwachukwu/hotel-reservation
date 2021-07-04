@@ -6,9 +6,9 @@ public class Customer {
     private final String firstName;
     private final String lastName;
     private final String email;
+    public static final String emailRegex = "^(.+)@(.+).(.+)$";
 
     public Customer(String firstName, String lastName, String email){
-        String emailRegex = "^(.+)@(.+).(.+)$";
         Pattern pattern = Pattern.compile(emailRegex);
         if (email == null || firstName == null || lastName == null) {
             throw new IllegalArgumentException("All fields are required");

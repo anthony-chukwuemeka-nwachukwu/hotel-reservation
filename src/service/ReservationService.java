@@ -7,8 +7,8 @@ import model.Reservation;
 import java.util.*;
 
 public class ReservationService {
-    private final Map<String, List<Reservation>> reservations = new HashMap<>();
-    private final Map<String, IRoom> rooms = new HashMap<>();
+    final Map<String, List<Reservation>> reservations = new HashMap<>();
+    final Map<String, IRoom> rooms = new HashMap<>();
 
     //Singleton declarations starts
     private static final ReservationService reservationService = new ReservationService();

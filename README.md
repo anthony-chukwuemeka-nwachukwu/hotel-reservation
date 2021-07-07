@@ -8,7 +8,7 @@ The architecture of the APP is shown below
 
 The User interface which is a command line based has the following feature:
 
-### User Menu
+### Main Menu
 The application provides four user scenarios:
 1. Creating a customer account.
 2. Searching and Booking for rooms using checkin and checkout dates.

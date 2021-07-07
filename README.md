@@ -1,7 +1,7 @@
 # hotel-reservation
 An application that allows users to make room reservation in a hotel.
 
-This application design and implementation is intended to show my newly learned skill on object oriented programming with Java. It may lack some other important skill sets required by a JAVA developer like good design patterns but my subsequent designs will cover that.
+This application design and implementation is intended to show my newly learned skill on object oriented programming with Java.
 
 The architecture of the APP is shown below
 ![hotelreservation01](https://user-images.githubusercontent.com/39138981/124680441-b6ff2f00-dec6-11eb-821a-09388d06656b.png)
